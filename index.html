@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Landerz</title>
   </head>
@@ -24,8 +26,8 @@
         <ul class="nav_list">
           <li class="nav_item"><a href="./index.html">Home</a></li>
           <li class="nav_item"><a href="#features">Features</a></li>
-          <li class="nav_item"><a href="#">About&nbsp;Us</a></li>
-          <li class="nav_item"><a href="#">Testemonials</a></li>
+          <li class="nav_item"><a href="#about">About&nbsp;Us</a></li>
+          <li class="nav_item"><a href="#testemonials">Testemonials</a></li>
           <li class="nav_item"><a href="#">Blog</a></li>
           <li class="nav_item"><a href="#">Contact</a></li>
         </ul>
@@ -140,13 +142,15 @@
                 Voluptatem neque nisi architecto autem molestias corrupti
                 officia veniam.
               </p>
-              <p>
-                <span class="section_subtitle_icon"></span>Adipisci excepturi
-                aliquam
+              <p class="create_subtitle">
+                <span class="create_subtitle_icon">
+                  <i class="fa-solid fa-check"></i></span
+                >Adipisci excepturi aliquam
               </p>
-              <p>
-                <span class="section_subtitle_icon"></span>Deleniti labore
-                reiciendis
+              <p class="create_subtitle">
+                <span class="create_subtitle_icon">
+                  <i class="fa-solid fa-check"></i></span
+                >Deleniti labore reiciendis
               </p>
             </div>
 
@@ -181,13 +185,15 @@
                 Voluptatem neque nisi architecto autem molestias corrupti
                 officia veniam.
               </p>
-              <p>
-                <span class="section_subtitle_icon"></span>Adipisci excepturi
-                aliquam
+              <p class="create_subtitle">
+                <span class="create_subtitle_icon">
+                  <i class="fa-solid fa-check"></i></span
+                >Adipisci excepturi aliquam
               </p>
-              <p>
-                <span class="section_subtitle_icon"></span>Deleniti labore
-                reiciendis
+              <p class="create_subtitle">
+                <span class="create_subtitle_icon">
+                  <i class="fa-solid fa-check"></i></span
+                >Deleniti labore reiciendis
               </p>
             </div>
 
@@ -210,10 +216,80 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section_title about_title">About Us</h2>
+
+        <div class="about_wrap">
+          <div class="about_image">
+            <img src="./assets/image/about_us.svg" alt="about" />
+          </div>
+
+          <div class="about_content">
+            <h3 class="about_subtitle">Create interactive prototypes</h3>
+            <p class="section_text about_text">
+              Eos cumque optio dolores excepturi rerum temporibus magni
+              recusandae eveniet, totam omnis consectetur maxime quibusdam
+              expedita dolorem dolor nobis dicta labore quaerat esse magnam
+              unde, aperiam delectus! At maiores, itaque.
+            </p>
+            <a href="#"><div class="hero_btn">Learn&nbsp;More</div></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testemonials" id="testemonials">
+      <div class="container">
+        <h2 class="section_title testemonials_title">Testemonials</h2>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="testemonials_box">
+              <div class="testemonials_box_icon">
+                <img
+                  src="./assets/image/testimonial_1.jpg.webp"
+                  alt="testemonials"
+                />
+              </div>
+              <blockquote class="testemonials_text">
+                “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur unde reprehenderit aperiam quaerat fugiat
+                repudiandae explicabo animi minima fuga beatae illum eligendi
+                incidunt consequatur. Amet dolores excepturi earum unde iusto.”
+              </blockquote>
+              <p class="testemonials_subtitle">John Smith</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testemonials_box">
+              <div class="testemonials_box_icon">
+                <img
+                  src="./assets/image/testimonial_1.jpg.webp"
+                  alt="testemonials"
+                />
+              </div>
+              <blockquote class="testemonials_text">
+                “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur unde reprehenderit aperiam quaerat fugiat
+                repudiandae explicabo animi minima fuga beatae illum eligendi
+                incidunt consequatur. Amet dolores excepturi earum unde iusto.”
+              </blockquote>
+              <p class="testemonials_subtitle">John Smith</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
     <section></section>
     <section></section>
     <footer></footer>
+    <script
+      src="https://kit.fontawesome.com/7d39f0a187.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./assets/js/owl_carousel.js"></script>
   </body>
 </html>

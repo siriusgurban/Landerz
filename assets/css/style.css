@@ -13,6 +13,11 @@
   list-style: none;
 }
 
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -233,11 +238,14 @@ a {
 .create_wrap {
   display: flex;
   gap: 30px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--secondary);
 }
 
 .create_wrap_bottom {
   display: flex;
   gap: 30px;
+  padding-top: 100px;
   flex-direction: row-reverse;
 }
 
@@ -264,6 +272,25 @@ a {
   padding-right: 40px;
   justify-content: center;
   max-width: 42%;
+}
+
+.create_content_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create_subtitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 200;
+}
+
+.create_subtitle_icon i {
+  width: 15px;
+  height: 11px;
+  color: #8bc34a;
 }
 
 .create_title {
@@ -313,13 +340,103 @@ a {
   width: 90%;
 }
 
-.section_subtitle_icon::after {
-  left: 0;
-  font-size: 20px;
-  top: -6px;
-  font-family: "icomoon";
-  content: "\e5ca";
-  position: absolute;
+/* -----------------------Create-End----------------------------------------------- */
+/* -----------------------About-Us-Start----------------------------------------------- */
+
+.about {
+  background-color: var(--secondary);
+  padding: 80px 0 128px 0;
 }
 
-/* -----------------------Create-End----------------------------------------------- */
+.about_title {
+  text-align: center;
+}
+
+.about_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.about_image {
+  width: 50%;
+}
+
+.about_image img {
+  border-radius: 4px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about_content {
+  max-width: 430px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about_subtitle {
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 400;
+}
+
+.about_text {
+  font-weight: 100;
+  line-height: 28px;
+  color: #808080;
+  font-weight: 300;
+}
+
+/* -----------------------About-Us-End----------------------------------------------- */
+/* -----------------------Testimonial-Start----------------------------------------------- */
+
+.owl-carousel {
+}
+
+.testemonials{
+  padding: 80px 0;
+}
+
+.testemonials_title{
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.testemonials_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.testemonials_box_icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.testemonials_text {
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 40.8px;
+  font-style: italic;
+}
+
+.testemonials_subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+}
+
+/* -----------------------Testimonial-End----------------------------------------------- */
