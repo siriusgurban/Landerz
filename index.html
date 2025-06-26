@@ -9,8 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" />
+    <!-- <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css" /> -->
+
+    <!-- Owl Carousel CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Landerz</title>
   </head>
@@ -241,42 +256,58 @@
     <section class="testemonials" id="testemonials">
       <div class="container">
         <h2 class="section_title testemonials_title">Testemonials</h2>
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div class="testemonials_box">
-              <div class="testemonials_box_icon">
-                <img
-                  src="./assets/image/testimonial_1.jpg.webp"
-                  alt="testemonials"
-                />
-              </div>
-              <blockquote class="testemonials_text">
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur unde reprehenderit aperiam quaerat fugiat
-                repudiandae explicabo animi minima fuga beatae illum eligendi
-                incidunt consequatur. Amet dolores excepturi earum unde iusto.”
-              </blockquote>
-              <p class="testemonials_subtitle">John Smith</p>
-            </div>
-          </div>
 
-          <div class="item">
-            <div class="testemonials_box">
-              <div class="testemonials_box_icon">
-                <img
-                  src="./assets/image/testimonial_1.jpg.webp"
-                  alt="testemonials"
-                />
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="testemonials_box">
+                <div class="testemonials_box_icon">
+                  <img
+                    src="./assets/image/testimonial_1.jpg.webp"
+                    alt="testemonials"
+                  />
+                </div>
+                <blockquote class="testemonials_text">
+                  “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur unde reprehenderit aperiam quaerat fugiat
+                  repudiandae explicabo animi minima fuga beatae illum eligendi
+                  incidunt consequatur. Amet dolores excepturi earum unde
+                  iusto.”
+                </blockquote>
+                <p class="testemonials_subtitle">John Smith</p>
               </div>
-              <blockquote class="testemonials_text">
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur unde reprehenderit aperiam quaerat fugiat
-                repudiandae explicabo animi minima fuga beatae illum eligendi
-                incidunt consequatur. Amet dolores excepturi earum unde iusto.”
-              </blockquote>
-              <p class="testemonials_subtitle">John Smith</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="testemonials_box">
+                <div class="testemonials_box_icon">
+                  <img
+                    src="./assets/image/testimonial_1.jpg.webp"
+                    alt="testemonials"
+                  />
+                </div>
+                <blockquote class="testemonials_text">
+                  “Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur unde reprehenderit aperiam quaerat fugiat
+                  repudiandae explicabo animi minima fuga beatae illum eligendi
+                  incidunt consequatur. Amet dolores excepturi earum unde
+                  iusto.”
+                </blockquote>
+                <p class="testemonials_subtitle">John Smith</p>
+              </div>
             </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination">....</div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
         </div>
       </div>
     </section>
@@ -288,8 +319,13 @@
       src="https://kit.fontawesome.com/7d39f0a187.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./assets/js/owl_carousel.js"></script>
+    <!-- <script src="./assets/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script> -->
+
+    <!-- Owl Carousel JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> -->
+    <!-- <script src="./assets/js/owlCarousel.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script async src="./assets/js/swiper_carousel.js"></script>
   </body>
 </html>
