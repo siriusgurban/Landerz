@@ -32,8 +32,8 @@ h1 {
 }
 
 .container {
-  width: 100%;
-  max-width: 1140px;
+  width: 79.2%;
+  /* max-width: 1140px; */
   margin: 0 auto;
 }
 
@@ -103,6 +103,7 @@ a {
 .hero_left {
   display: flex;
   flex-direction: column;
+  /* width: 33.3%; */
   width: 380px;
 }
 
@@ -146,6 +147,10 @@ a {
   background-color: var(--secondary);
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.section_title_features {
+  text-align: center;
 }
 
 .features_wrap {
@@ -250,7 +255,7 @@ a {
 }
 
 .create_image {
-  max-width: 58%;
+  width: 58%;
 }
 
 .create_image img {
@@ -397,14 +402,11 @@ a {
 /* -----------------------About-Us-End----------------------------------------------- */
 /* -----------------------Testimonial-Start----------------------------------------------- */
 
-.owl-carousel {
-}
-
-.testemonials{
+.testemonials {
   padding: 80px 0;
 }
 
-.testemonials_title{
+.testemonials_title {
   text-align: center;
   padding-bottom: 64px;
 }
@@ -416,7 +418,6 @@ a {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-
 }
 
 .testemonials_box_icon img {
@@ -439,4 +440,63 @@ a {
   line-height: 27.2px;
 }
 
+.swiper-pagination {
+  position: relative;
+}
+
 /* -----------------------Testimonial-End----------------------------------------------- */
+/* -----------------------Responsive-Start---------------------------------------------- */
+
+@media (max-width: 992px) {
+  .hero_title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .hero_wrap {
+    flex-direction: column-reverse;
+  }
+  .hero_left {
+    width: 100%;
+  }
+
+  .section_title {
+    font-size: 30px;
+  }
+
+  .features_box {
+    width: 100%;
+  }
+
+  .create_wrap,
+  .create_wrap_bottom {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .create_image {
+    width: 100%;
+  }
+
+  .create_content,
+  .create_content_bottom {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about_wrap {
+    flex-direction: column;
+  }
+
+  .about_image {
+    width: 100%;
+  }
+
+  .about_content {
+    width: 100%;
+  }
+
+  .testemonials_text {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
