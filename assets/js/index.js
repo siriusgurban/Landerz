@@ -60,7 +60,7 @@ function closeMenu() {
   sideNav.classList.add("nav");
   sideNav.classList.remove("active");
   overlay.classList.remove("active");
-   document.body.classList.remove("no-scroll"); // ✅ enable scroll
+  document.body.classList.remove("no-scroll"); // ✅ enable scroll
 }
 
 closeBtn.addEventListener("click", closeMenu);
@@ -72,19 +72,37 @@ overlay.addEventListener("click", closeMenu);
   });
 })();
 
+const header = document.querySelector(".header");
+const hero = document.querySelector(".hero");
 
-
-const header = document.querySelector('.header');
-const hero = document.querySelector('.hero');
-
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
-    header.classList.add('sticky');
-    hero.classList.add('hero_alternate');
+    header.classList.add("sticky");
+    hero.classList.add("hero_alternate");
   } else {
-    header.classList.remove('sticky');
-    hero.classList.remove('hero_alternate');
+    header.classList.remove("sticky");
+    hero.classList.remove("hero_alternate");
   }
 });
 
 AOS.init();
+
+const dark_mode = document.querySelector("#dark_mode");
+const dark_mode_icon = document.querySelector("#dark_mode i");
+const lightColor = document.querySelector("#color");
+
+function switchTheme() {
+  if (lightColor.getAttribute("href") === "./assets/css/color.css") {
+    lightColor.href = "./assets/css/dark_color.css";
+    dark_mode_icon.classList.add("fa-sun");
+    dark_mode_icon.style.color = "#FFD43B"
+    dark_mode_icon.classList.remove("fa-moon");
+  } else {
+    lightColor.href = "./assets/css/color.css";
+    dark_mode_icon.classList.remove("fa-sun");
+    dark_mode_icon.style.color = "#000000"
+    dark_mode_icon.classList.add("fa-moon");
+  }
+}
+
+dark_mode.addEventListener("click", switchTheme);
