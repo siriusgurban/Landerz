@@ -3,6 +3,7 @@
   --white: #fff;
   --secondary: #f6f6f6;
   --black: #000;
+  --grey: #808080;
 }
 
 * {
@@ -33,7 +34,7 @@ h1 {
 
 .container {
   width: 79.2%;
-  /* max-width: 1140px; */
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -433,9 +434,8 @@ a {
 }
 
 .about_text {
-  font-weight: 100;
   line-height: 28px;
-  color: #808080;
+  color: var(--grey);
   font-weight: 300;
 }
 
@@ -485,6 +485,114 @@ a {
 }
 
 /* -----------------------Testimonial-End----------------------------------------------- */
+/* -----------------------Blog-Start----------------------------------------------- */
+
+.blog_title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.blog_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 80px;
+}
+
+.blog_card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 30.7%;
+  /* width: 350px; */
+  margin-bottom: 20px;
+}
+
+.blog_card_image img {
+  width: 100%;
+}
+
+.blog_card_title {
+  padding-bottom: 12px;
+}
+
+.blog_card_title a {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.blog_card_content {
+  font-size: 14px;
+  color: var(--grey);
+  font-weight: 200;
+}
+
+.blog_card_content {
+  display: flex;
+  gap: 8px;
+}
+
+.blog_card_news a {
+  color: var(--main);
+}
+
+.blog_card_news a:hover {
+  color: #007e6d;
+}
+
+.blog_card_text {
+  color: var(--grey);
+  line-height: 27.2px;
+  font-weight: 300;
+}
+
+.blog_card_link {
+  color: var(--main);
+}
+
+.blog_card_link:hover {
+  color: #007e6d;
+}
+
+/* -----------------------Blog-End----------------------------------------------- */
+/* -----------------------Contact-Start----------------------------------------------- */
+.contact {
+  background-color: var(--secondary);
+}
+.contact_title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+/* -----------------------Contact-End----------------------------------------------- */
+/* -----------------------Footer-Start----------------------------------------------- */
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.footer_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+.footer_list {
+  display: flex;
+  gap: 36px;
+}
+
+.footer_list a {
+  color: var(--main);
+}
+
+.footer_text{
+  color: var(--grey);
+}
+
+/* -----------------------Footer-End----------------------------------------------- */
 /* -----------------------Responsive-Start---------------------------------------------- */
 
 @media (max-width: 992px) {
@@ -613,5 +721,9 @@ a {
   .testemonials_text {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .blog_card {
+    width: 100%;
   }
 }
