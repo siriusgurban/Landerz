@@ -43,6 +43,7 @@ const hamburger = document.querySelector("#hamburger");
 const sideNav = document.querySelector("#sideNav");
 const overlay = document.querySelector("#overlay");
 const closeBtn = document.querySelector("#closeBtn");
+const navLinks = document.querySelectorAll(".nav_item a");
 
 function callHamburger() {
   console.log(sideNav, "sideNav");
@@ -50,6 +51,7 @@ function callHamburger() {
   sideNav.classList.remove("nav");
   sideNav.classList.toggle("active");
   overlay.classList.toggle("active");
+  document.body.classList.add("no-scroll"); // ✅ disable scroll
 }
 
 hamburger.addEventListener("click", callHamburger);
@@ -58,7 +60,31 @@ function closeMenu() {
   sideNav.classList.add("nav");
   sideNav.classList.remove("active");
   overlay.classList.remove("active");
+   document.body.classList.remove("no-scroll"); // ✅ enable scroll
 }
 
 closeBtn.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
+
+(function closeAfterClick() {
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+})();
+
+
+
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('sticky');
+    hero.classList.add('hero_alternate');
+  } else {
+    header.classList.remove('sticky');
+    hero.classList.remove('hero_alternate');
+  }
+});
+
+AOS.init();

@@ -28,6 +28,10 @@ body {
   font-size: 16px;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   font-size: 48px;
 }
@@ -74,11 +78,39 @@ a {
 /* -----------------------Header-Start----------------------------------------------- */
 
 .header {
-  margin-top: 54px;
+  padding-top: 54px;
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  background-color: var(--white);
+}
+
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+  padding: 10px 0;
+}
+
+.header.sticky .logo {
+  display: none;
+  pointer-events: none;
+}
+
+.header.sticky .row {
+  gap: 0;
+}
+
+.hero.hero_alternate {
+  margin-top: 180px;
+  transition: all 0.3s ease;
 }
 
 .logo a {
   font-size: 32px;
+  transition: opacity 0.3s ease;
   /* color: black; */
 }
 
@@ -667,7 +699,23 @@ button {
 
 @media (max-width: 992px) {
   .header {
+    padding-top: 0;
+
     margin-top: 0;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+  }
+
+  .header.sticky {
+    padding: 0;
+  }
+
+  .header.sticky .logo {
+    display: flex;
   }
 
   .hamburger {
@@ -747,6 +795,7 @@ button {
   }
   .hero_wrap {
     flex-direction: column-reverse;
+    gap: 40px;
   }
   .hero_left {
     width: 100%;
@@ -801,5 +850,9 @@ button {
 @media (max-width: 768px) {
   .contact_form_box_wrap {
     flex-direction: column;
+  }
+
+  .contact_form {
+    padding: 24px;
   }
 }
