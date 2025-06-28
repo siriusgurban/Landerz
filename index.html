@@ -53,7 +53,9 @@
               Laboriosam assumenda ea quo cupiditate facere deleniti fuga
               officia.
             </p>
-            <div class="hero_btn"><a href="#">Get&nbsp;Started</a></div>
+            <div class="hero_button">
+              <a href="#" class="hero_btn">Get&nbsp;Started</a>
+            </div>
           </div>
           <div class="hero_image">
             <img src="./assets/image/hero.svg" alt="hero" />
@@ -457,39 +459,45 @@
     <section class="contact" id="contact">
       <div class="container">
         <h2 class="section_title contact_title">Get In Touch</h2>
-        <form class="contact_form">
+        <form class="contact_form" action="/submit" >
           <p class="contact_form_title">Contact Form</p>
           <div class="contact_form_box">
             <div class="contact_form_box_wrap">
-              <label for="name"
-                >First Name
+              <div>
+                <label for="name">First Name</label>
                 <input
                   id="name"
                   name="name"
                   type="text"
+                  required
                   class="contact_form_input"
-              /></label>
-              <label for="lastname"
-                >Last Name
+                />
+              </div>
+              <div>
+                <label for="lastname">Last Name</label>
                 <input
                   id="lastname"
                   name="lastname"
                   type="text"
+                  required
                   class="contact_form_input"
-              /></label>
+                />
+              </div>
             </div>
+
             <label for="email">Email</label>
             <input
               id="email"
               name="email"
               type="email"
+              required
               class="contact_form_input"
             />
             <label for="subject">Subject</label>
             <input
               id="subject"
-              name="subject"
               type="text"
+              required
               class="contact_form_input"
             />
 
@@ -499,11 +507,12 @@
               name="message"
               placeholder="Write your notes or questions here..."
               cols="30"
-              rows="10"
+              rows="11"
+              required
               class="contact_form_textarea"
             ></textarea>
           </div>
-          <button class="btn">Send Message</button>
+          <button type="submit"><a class="hero_btn">Send&nbsp;Message</a></button>
         </form>
       </div>
     </section>
