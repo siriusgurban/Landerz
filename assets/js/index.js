@@ -91,18 +91,39 @@ const dark_mode = document.querySelector("#dark_mode");
 const dark_mode_icon = document.querySelector("#dark_mode i");
 const lightColor = document.querySelector("#color");
 
+function applyDarkTheme() {
+  lightColor.href = "./assets/css/dark_color.css";
+  dark_mode_icon.classList.add("fa-sun");
+  dark_mode_icon.classList.remove("fa-moon");
+  dark_mode_icon.style.color = "#FFD43B";
+  localStorage.setItem("theme", "dark");
+}
+
+function applyLightTheme() {
+  lightColor.href = "./assets/css/color.css";
+  dark_mode_icon.classList.remove("fa-sun");
+  dark_mode_icon.classList.add("fa-moon");
+  dark_mode_icon.style.color = "#000000";
+  localStorage.setItem("theme", "light");
+}
+
 function switchTheme() {
   if (lightColor.getAttribute("href") === "./assets/css/color.css") {
-    lightColor.href = "./assets/css/dark_color.css";
-    dark_mode_icon.classList.add("fa-sun");
-    dark_mode_icon.style.color = "#FFD43B"
-    dark_mode_icon.classList.remove("fa-moon");
+    applyDarkTheme();
   } else {
-    lightColor.href = "./assets/css/color.css";
-    dark_mode_icon.classList.remove("fa-sun");
-    dark_mode_icon.style.color = "#000000"
-    dark_mode_icon.classList.add("fa-moon");
+    applyLightTheme();
   }
 }
+
+// ✅ Load saved theme on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
+    applyDarkTheme();
+  } else {
+    applyLightTheme(); // fallback to light if nothing stored
+  }
+});
 
 dark_mode.addEventListener("click", switchTheme);
